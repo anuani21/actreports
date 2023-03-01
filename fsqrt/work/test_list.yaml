@@ -1,0 +1,78 @@
+# testlist generated on 2023-02-28 07:17 GMT
+/home/anusha/new/RV32H/fsqrt/test/fsqrt_b1-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fsqrt/work/fsqrt_b1-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fsqrt_b1
+  test_path: /home/anusha/new/RV32H/fsqrt/test/fsqrt_b1-01.S
+/home/anusha/new/RV32H/fsqrt/test/fsqrt_b2-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fsqrt/work/fsqrt_b2-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fsqrt_b2
+  test_path: /home/anusha/new/RV32H/fsqrt/test/fsqrt_b2-01.S
+/home/anusha/new/RV32H/fsqrt/test/fsqrt_b3-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fsqrt/work/fsqrt_b3-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fsqrt_b3
+  test_path: /home/anusha/new/RV32H/fsqrt/test/fsqrt_b3-01.S
+/home/anusha/new/RV32H/fsqrt/test/fsqrt_b4-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fsqrt/work/fsqrt_b4-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fsqrt_b4
+  test_path: /home/anusha/new/RV32H/fsqrt/test/fsqrt_b4-01.S
+/home/anusha/new/RV32H/fsqrt/test/fsqrt_b5-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fsqrt/work/fsqrt_b5-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fsqrt_b5
+  test_path: /home/anusha/new/RV32H/fsqrt/test/fsqrt_b5-01.S
+/home/anusha/new/RV32H/fsqrt/test/fsqrt_b7-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fsqrt/work/fsqrt_b7-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fsqrt_b7
+  test_path: /home/anusha/new/RV32H/fsqrt/test/fsqrt_b7-01.S
+/home/anusha/new/RV32H/fsqrt/test/fsqrt_b8-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fsqrt/work/fsqrt_b8-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fsqrt_b8
+  test_path: /home/anusha/new/RV32H/fsqrt/test/fsqrt_b8-01.S

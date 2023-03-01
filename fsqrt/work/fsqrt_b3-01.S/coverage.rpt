@@ -1,0 +1,97 @@
+---
+fsqrt_b3:
+  config:
+  - check ISA:=regex(.*I.*F.*Zfh.*)
+  mnemonics:
+    fsqrt.h: 33
+    coverage: 1/1
+  op_comb:
+    rs1 != rd: 32
+    rs1 == rd: 1
+    coverage: 2/2
+  rd:
+    f0: 1
+    f1: 1
+    f10: 1
+    f11: 1
+    f12: 1
+    f13: 1
+    f14: 1
+    f15: 1
+    f16: 1
+    f17: 1
+    f18: 1
+    f19: 1
+    f2: 1
+    f20: 1
+    f21: 1
+    f22: 1
+    f23: 1
+    f24: 1
+    f25: 1
+    f26: 1
+    f27: 1
+    f28: 1
+    f29: 1
+    f3: 1
+    f30: 1
+    f31: 2
+    f4: 1
+    f5: 1
+    f6: 1
+    f7: 1
+    f8: 1
+    f9: 1
+    coverage: 32/32
+  rs1:
+    f0: 1
+    f1: 1
+    f10: 1
+    f11: 1
+    f12: 1
+    f13: 1
+    f14: 1
+    f15: 1
+    f16: 1
+    f17: 1
+    f18: 1
+    f19: 1
+    f2: 1
+    f20: 1
+    f21: 1
+    f22: 1
+    f23: 1
+    f24: 1
+    f25: 1
+    f26: 1
+    f27: 1
+    f28: 1
+    f29: 1
+    f3: 1
+    f30: 1
+    f31: 2
+    f4: 1
+    f5: 1
+    f6: 1
+    f7: 1
+    f8: 1
+    f9: 1
+    coverage: 32/32
+  val_comb:
+    'fs1 == 0 and fe1 == 0x00 and fm1 == 0x000 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 19
+    'fs1 == 0 and fe1 == 0x00 and fm1 == 0x000 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x00 and fm1 == 0x000 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x00 and fm1 == 0x000 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x00 and fm1 == 0x000 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x1b and fm1 == 0x240 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x1b and fm1 == 0x240 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x1b and fm1 == 0x240 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x1b and fm1 == 0x240 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x1b and fm1 == 0x240 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x06 and fm1 == 0x080 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x06 and fm1 == 0x080 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x06 and fm1 == 0x080 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x06 and fm1 == 0x080 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    'fs1 == 0 and fe1 == 0x06 and fm1 == 0x080 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix == 0xffff  #nosat': 1
+    coverage: 15/15
+  total_coverage: 82/82
