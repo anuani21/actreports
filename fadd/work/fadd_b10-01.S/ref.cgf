@@ -1,0 +1,142 @@
+fadd_b10:
+     config:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+     mnemonics:
+          fadd.h: 38
+          coverage: 1/1
+     op_comb:
+          rs1 != rs2  and rs1 != rd and rs2 != rd: 34
+          rs1 == rd != rs2: 1
+          rs1 == rs2 != rd: 1
+          rs1 == rs2 == rd: 1
+          rs2 == rd != rs1: 1
+          coverage: 5/5
+     rd:
+          f0: 1
+          f1: 1
+          f10: 1
+          f11: 1
+          f12: 1
+          f13: 1
+          f14: 1
+          f15: 1
+          f16: 1
+          f17: 1
+          f18: 1
+          f19: 1
+          f2: 1
+          f20: 1
+          f21: 1
+          f22: 1
+          f23: 1
+          f24: 1
+          f25: 1
+          f26: 1
+          f27: 1
+          f28: 1
+          f29: 1
+          f3: 1
+          f30: 1
+          f31: 7
+          f4: 1
+          f5: 1
+          f6: 1
+          f7: 1
+          f8: 1
+          f9: 1
+          coverage: 32/32
+     rs1:
+          f0: 1
+          f1: 1
+          f10: 1
+          f11: 1
+          f12: 1
+          f13: 1
+          f14: 1
+          f15: 1
+          f16: 1
+          f17: 1
+          f18: 1
+          f19: 1
+          f2: 1
+          f20: 1
+          f21: 1
+          f22: 1
+          f23: 1
+          f24: 1
+          f25: 1
+          f26: 1
+          f27: 1
+          f28: 1
+          f29: 1
+          f3: 1
+          f30: 5
+          f31: 3
+          f4: 1
+          f5: 1
+          f6: 1
+          f7: 1
+          f8: 1
+          f9: 1
+          coverage: 32/32
+     rs2:
+          f0: 1
+          f1: 1
+          f10: 1
+          f11: 1
+          f12: 1
+          f13: 1
+          f14: 1
+          f15: 1
+          f16: 1
+          f17: 1
+          f18: 1
+          f19: 1
+          f2: 1
+          f20: 1
+          f21: 1
+          f22: 1
+          f23: 1
+          f24: 1
+          f25: 1
+          f26: 1
+          f27: 1
+          f28: 1
+          f29: 3
+          f3: 1
+          f30: 5
+          f31: 1
+          f4: 1
+          f5: 1
+          f6: 1
+          f7: 1
+          f8: 1
+          f9: 1
+          coverage: 32/32
+     val_comb:
+          ? 'fs1 == 0 and fe1 == 0x14 and fm1 == 0x2ee and fs2 == 0 and fe2 == 0x00
+               and fm2 == 0x053 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x14 and fm1 == 0x2ee and fs2 == 0 and fe2 == 0x0a
+               and fm2 == 0x262 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x14 and fm1 == 0x2ee and fs2 == 0 and fe2 == 0x0d
+               and fm2 == 0x3fb and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x14 and fm1 == 0x2ee and fs2 == 0 and fe2 == 0x11
+               and fm2 == 0x0fd and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x14 and fm1 == 0x2ee and fs2 == 0 and fe2 == 0x14
+               and fm2 == 0x23c and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x14 and fm1 == 0x2ee and fs2 == 0 and fe2 == 0x17
+               and fm2 == 0x3cb and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          coverage: 6/6
+     total_coverage: 108/108

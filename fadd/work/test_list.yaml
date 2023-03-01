@@ -1,0 +1,122 @@
+# testlist generated on 2023-02-28 07:25 GMT
+/home/anusha/new/RV32H/fadd/test/fadd_b1-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fadd/work/fadd_b1-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fadd_b1
+  test_path: /home/anusha/new/RV32H/fadd/test/fadd_b1-01.S
+/home/anusha/new/RV32H/fadd/test/fadd_b10-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fadd/work/fadd_b10-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fadd_b10
+  test_path: /home/anusha/new/RV32H/fadd/test/fadd_b10-01.S
+/home/anusha/new/RV32H/fadd/test/fadd_b11-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fadd/work/fadd_b11-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fadd_b11
+  test_path: /home/anusha/new/RV32H/fadd/test/fadd_b11-01.S
+/home/anusha/new/RV32H/fadd/test/fadd_b12-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fadd/work/fadd_b12-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fadd_b12
+  test_path: /home/anusha/new/RV32H/fadd/test/fadd_b12-01.S
+/home/anusha/new/RV32H/fadd/test/fadd_b13-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fadd/work/fadd_b13-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fadd_b13
+  test_path: /home/anusha/new/RV32H/fadd/test/fadd_b13-01.S
+/home/anusha/new/RV32H/fadd/test/fadd_b2-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fadd/work/fadd_b2-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fadd_b2
+  test_path: /home/anusha/new/RV32H/fadd/test/fadd_b2-01.S
+/home/anusha/new/RV32H/fadd/test/fadd_b3-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fadd/work/fadd_b3-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fadd_b3
+  test_path: /home/anusha/new/RV32H/fadd/test/fadd_b3-01.S
+/home/anusha/new/RV32H/fadd/test/fadd_b4-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fadd/work/fadd_b4-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fadd_b4
+  test_path: /home/anusha/new/RV32H/fadd/test/fadd_b4-01.S
+/home/anusha/new/RV32H/fadd/test/fadd_b5-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fadd/work/fadd_b5-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fadd_b5
+  test_path: /home/anusha/new/RV32H/fadd/test/fadd_b5-01.S
+/home/anusha/new/RV32H/fadd/test/fadd_b7-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fadd/work/fadd_b7-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fadd_b7
+  test_path: /home/anusha/new/RV32H/fadd/test/fadd_b7-01.S
+/home/anusha/new/RV32H/fadd/test/fadd_b8-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fadd/work/fadd_b8-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fadd_b8
+  test_path: /home/anusha/new/RV32H/fadd/test/fadd_b8-01.S
