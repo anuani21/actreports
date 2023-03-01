@@ -1,0 +1,119 @@
+# database generated on 2023-02-28 07:34 GMT
+!!omap
+- /home/anusha/new/RV32H/fmul/test/fmul_b1-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmul_b1
+- /home/anusha/new/RV32H/fmul/test/fmul_b2-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmul_b2
+- /home/anusha/new/RV32H/fmul/test/fmul_b3-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmul_b3
+- /home/anusha/new/RV32H/fmul/test/fmul_b4-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmul_b4
+- /home/anusha/new/RV32H/fmul/test/fmul_b5-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmul_b5
+- /home/anusha/new/RV32H/fmul/test/fmul_b6-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmul_b6
+- /home/anusha/new/RV32H/fmul/test/fmul_b7-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmul_b7
+- /home/anusha/new/RV32H/fmul/test/fmul_b8-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmul_b8
+- /home/anusha/new/RV32H/fmul/test/fmul_b9-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmul_b9

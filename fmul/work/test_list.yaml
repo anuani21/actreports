@@ -1,0 +1,100 @@
+# testlist generated on 2023-02-28 07:34 GMT
+/home/anusha/new/RV32H/fmul/test/fmul_b1-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fmul/work/fmul_b1-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fmul_b1
+  test_path: /home/anusha/new/RV32H/fmul/test/fmul_b1-01.S
+/home/anusha/new/RV32H/fmul/test/fmul_b2-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fmul/work/fmul_b2-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fmul_b2
+  test_path: /home/anusha/new/RV32H/fmul/test/fmul_b2-01.S
+/home/anusha/new/RV32H/fmul/test/fmul_b3-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fmul/work/fmul_b3-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fmul_b3
+  test_path: /home/anusha/new/RV32H/fmul/test/fmul_b3-01.S
+/home/anusha/new/RV32H/fmul/test/fmul_b4-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fmul/work/fmul_b4-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fmul_b4
+  test_path: /home/anusha/new/RV32H/fmul/test/fmul_b4-01.S
+/home/anusha/new/RV32H/fmul/test/fmul_b5-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fmul/work/fmul_b5-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fmul_b5
+  test_path: /home/anusha/new/RV32H/fmul/test/fmul_b5-01.S
+/home/anusha/new/RV32H/fmul/test/fmul_b6-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fmul/work/fmul_b6-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fmul_b6
+  test_path: /home/anusha/new/RV32H/fmul/test/fmul_b6-01.S
+/home/anusha/new/RV32H/fmul/test/fmul_b7-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fmul/work/fmul_b7-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fmul_b7
+  test_path: /home/anusha/new/RV32H/fmul/test/fmul_b7-01.S
+/home/anusha/new/RV32H/fmul/test/fmul_b8-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fmul/work/fmul_b8-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fmul_b8
+  test_path: /home/anusha/new/RV32H/fmul/test/fmul_b8-01.S
+/home/anusha/new/RV32H/fmul/test/fmul_b9-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fmul/work/fmul_b9-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fmul_b9
+  test_path: /home/anusha/new/RV32H/fmul/test/fmul_b9-01.S
