@@ -1,0 +1,28 @@
+# database generated on 2023-02-28 07:19 GMT
+!!omap
+- /home/anusha/new/RV32H/fmax/test/fmax_b1-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmax_b1
+- /home/anusha/new/RV32H/fmax/test/fmax_b19-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmax_b19
