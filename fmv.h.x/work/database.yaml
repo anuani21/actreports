@@ -1,0 +1,28 @@
+# database generated on 2023-02-28 07:43 GMT
+!!omap
+- /home/anusha/new/RV32H/fmv.h.x/test/fmv.h.x_b25-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmv.h.x_b25
+- /home/anusha/new/RV32H/fmv.h.x/test/fmv.h.x_b26-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmv.h.x_b26

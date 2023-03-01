@@ -1,0 +1,93 @@
+# database generated on 2023-02-28 07:44 GMT
+!!omap
+- /home/anusha/new/RV32H/fmv.x.h/test/fmv.x.h_b1-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmv.x.h_b1
+- /home/anusha/new/RV32H/fmv.x.h/test/fmv.x.h_b22-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmv.x.h_b22
+- /home/anusha/new/RV32H/fmv.x.h/test/fmv.x.h_b23-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmv.x.h_b23
+- /home/anusha/new/RV32H/fmv.x.h/test/fmv.x.h_b24-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmv.x.h_b24
+- /home/anusha/new/RV32H/fmv.x.h/test/fmv.x.h_b27-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmv.x.h_b27
+- /home/anusha/new/RV32H/fmv.x.h/test/fmv.x.h_b28-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmv.x.h_b28
+- /home/anusha/new/RV32H/fmv.x.h/test/fmv.x.h_b29-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fmv.x.h_b29

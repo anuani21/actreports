@@ -1,0 +1,23 @@
+# testlist generated on 2023-02-28 07:43 GMT
+/home/anusha/new/RV32H/fmv.h.x/test/fmv.h.x_b25-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fmv.h.x/work/fmv.h.x_b25-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fmv.h.x_b25
+  test_path: /home/anusha/new/RV32H/fmv.h.x/test/fmv.h.x_b25-01.S
+/home/anusha/new/RV32H/fmv.h.x/test/fmv.h.x_b26-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fmv.h.x/work/fmv.h.x_b26-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fmv.h.x_b26
+  test_path: /home/anusha/new/RV32H/fmv.h.x/test/fmv.h.x_b26-01.S
