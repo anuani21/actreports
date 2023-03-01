@@ -1,0 +1,78 @@
+# testlist generated on 2023-02-28 07:38 GMT
+/home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b1-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fcvt.h.s/work/fcvt.h.s_b1-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fcvt.h.s_b1
+  test_path: /home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b1-01.S
+/home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b22-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fcvt.h.s/work/fcvt.h.s_b22-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fcvt.h.s_b22
+  test_path: /home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b22-01.S
+/home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b23-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fcvt.h.s/work/fcvt.h.s_b23-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fcvt.h.s_b23
+  test_path: /home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b23-01.S
+/home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b24-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fcvt.h.s/work/fcvt.h.s_b24-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fcvt.h.s_b24
+  test_path: /home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b24-01.S
+/home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b27-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fcvt.h.s/work/fcvt.h.s_b27-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fcvt.h.s_b27
+  test_path: /home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b27-01.S
+/home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b28-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fcvt.h.s/work/fcvt.h.s_b28-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fcvt.h.s_b28
+  test_path: /home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b28-01.S
+/home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b29-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fcvt.h.s/work/fcvt.h.s_b29-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fcvt.h.s_b29
+  test_path: /home/anusha/new/RV32H/fcvt.h.s/test/fcvt.h.s_b29-01.S
