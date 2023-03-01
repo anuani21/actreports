@@ -1,0 +1,998 @@
+fsub_b5:
+     config:
+        - check ISA:=regex(.*I.*F.*Zfh.*)
+     mnemonics:
+          fsub.h: 222
+          coverage: 1/1
+     op_comb:
+          rs1 != rs2  and rs1 != rd and rs2 != rd: 218
+          rs1 == rd != rs2: 1
+          rs1 == rs2 != rd: 1
+          rs1 == rs2 == rd: 1
+          rs2 == rd != rs1: 1
+          coverage: 5/5
+     rd:
+          f0: 1
+          f1: 1
+          f10: 1
+          f11: 1
+          f12: 1
+          f13: 1
+          f14: 1
+          f15: 1
+          f16: 1
+          f17: 1
+          f18: 1
+          f19: 1
+          f2: 1
+          f20: 1
+          f21: 1
+          f22: 1
+          f23: 1
+          f24: 1
+          f25: 1
+          f26: 1
+          f27: 1
+          f28: 1
+          f29: 1
+          f3: 1
+          f30: 1
+          f31: 191
+          f4: 1
+          f5: 1
+          f6: 1
+          f7: 1
+          f8: 1
+          f9: 1
+          coverage: 32/32
+     rs1:
+          f0: 1
+          f1: 1
+          f10: 1
+          f11: 1
+          f12: 1
+          f13: 1
+          f14: 1
+          f15: 1
+          f16: 1
+          f17: 1
+          f18: 1
+          f19: 1
+          f2: 1
+          f20: 1
+          f21: 1
+          f22: 1
+          f23: 1
+          f24: 1
+          f25: 1
+          f26: 1
+          f27: 1
+          f28: 1
+          f29: 1
+          f3: 1
+          f30: 190
+          f31: 2
+          f4: 1
+          f5: 1
+          f6: 1
+          f7: 1
+          f8: 1
+          f9: 1
+          coverage: 32/32
+     rs2:
+          f0: 1
+          f1: 1
+          f10: 1
+          f11: 1
+          f12: 1
+          f13: 1
+          f14: 1
+          f15: 1
+          f16: 1
+          f17: 1
+          f18: 1
+          f19: 1
+          f2: 1
+          f20: 1
+          f21: 1
+          f22: 1
+          f23: 1
+          f24: 1
+          f25: 1
+          f26: 1
+          f27: 1
+          f28: 1
+          f29: 189
+          f3: 1
+          f30: 3
+          f31: 1
+          f4: 1
+          f5: 1
+          f6: 1
+          f7: 1
+          f8: 1
+          f9: 1
+          coverage: 32/32
+     val_comb:
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x04c and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x04c and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x04c and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x04c and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 2
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x04c and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x04c and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x04c and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x04c and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x04c and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x04c and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 2
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x21b and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x21b and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x21b and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x21b and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x21b and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x21b and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x21b and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x21b and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x21b and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x21b and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x3ec and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x3ec and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x3ec and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x3ec and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x3ec and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x3ec and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x3ec and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x3ec and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x3ec and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x3ec and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x135 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x135 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x135 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x135 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x135 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x135 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x135 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x135 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x135 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x135 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1b and fm1 == 0x201 and fs2 == 0 and fe2 == 0x1b
+               and fm2 == 0x201 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1b and fm1 == 0x201 and fs2 == 0 and fe2 == 0x1b
+               and fm2 == 0x201 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1b and fm1 == 0x201 and fs2 == 0 and fe2 == 0x1b
+               and fm2 == 0x201 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1b and fm1 == 0x201 and fs2 == 0 and fe2 == 0x1b
+               and fm2 == 0x201 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1b and fm1 == 0x201 and fs2 == 0 and fe2 == 0x1b
+               and fm2 == 0x201 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2ae and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2ae and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2ae and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2ae and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2ae and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2ae and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2ae and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2ae and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2ae and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2ae and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x218 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x218 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x218 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x218 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x218 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x218 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x218 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x218 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x218 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x218 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x31f and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x31f and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x31f and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x31f and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x31f and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x31f and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x31f and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x31f and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x31f and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x31f and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x351 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x351 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x351 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x351 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x351 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x351 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x351 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x351 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x351 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x351 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x335 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x335 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x335 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x335 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x335 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x335 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x335 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x335 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x335 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x335 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x19 and fm1 == 0x283 and fs2 == 0 and fe2 == 0x19
+               and fm2 == 0x283 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x19 and fm1 == 0x283 and fs2 == 0 and fe2 == 0x19
+               and fm2 == 0x283 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x19 and fm1 == 0x283 and fs2 == 0 and fe2 == 0x19
+               and fm2 == 0x283 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x19 and fm1 == 0x283 and fs2 == 0 and fe2 == 0x19
+               and fm2 == 0x283 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x19 and fm1 == 0x283 and fs2 == 0 and fe2 == 0x19
+               and fm2 == 0x283 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x382 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x382 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x382 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x382 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x382 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x382 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x382 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x382 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x382 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x382 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x2ed and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x2ed and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x2ed and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x2ed and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x2ed and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x2ed and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x2ed and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x2ed and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x2ed and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x2ed and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x19 and fm1 == 0x36f and fs2 == 0 and fe2 == 0x19
+               and fm2 == 0x36f and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x19 and fm1 == 0x36f and fs2 == 0 and fe2 == 0x19
+               and fm2 == 0x36f and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x19 and fm1 == 0x36f and fs2 == 0 and fe2 == 0x19
+               and fm2 == 0x36f and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x19 and fm1 == 0x36f and fs2 == 0 and fe2 == 0x19
+               and fm2 == 0x36f and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x19 and fm1 == 0x36f and fs2 == 0 and fe2 == 0x19
+               and fm2 == 0x36f and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x300 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x300 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x300 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x300 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x300 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x300 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x300 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x300 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x300 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x300 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x374 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x374 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x374 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x374 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x374 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x374 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x374 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x374 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x374 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x374 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x2ff and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x2ff and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x2ff and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x2ff and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x2ff and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x2ff and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x2ff and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x2ff and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x2ff and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x2ff and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x0a2 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x0a2 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x0a2 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x0a2 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x0a2 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x0a2 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x0a2 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x0a2 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x0a2 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x0a2 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2b2 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2b2 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2b2 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2b2 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2b2 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2b2 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2b2 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2b2 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2b2 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2b2 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x122 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x122 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x122 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x122 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x122 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x122 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x122 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x122 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x122 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x122 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x3ef and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x3ef and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x3ef and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x3ef and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x3ef and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x3ef and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x3ef and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x3ef and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x3ef and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x3ef and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1b and fm1 == 0x3bb and fs2 == 0 and fe2 == 0x1b
+               and fm2 == 0x3bb and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1b and fm1 == 0x3bb and fs2 == 0 and fe2 == 0x1b
+               and fm2 == 0x3bb and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1b and fm1 == 0x3bb and fs2 == 0 and fe2 == 0x1b
+               and fm2 == 0x3bb and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1b and fm1 == 0x3bb and fs2 == 0 and fe2 == 0x1b
+               and fm2 == 0x3bb and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1b and fm1 == 0x3bb and fs2 == 0 and fe2 == 0x1b
+               and fm2 == 0x3bb and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x1c4 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x1c4 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x1c4 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x1c4 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x1c4 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x1c4 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x1c4 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x1c4 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x1c4 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x1c4 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x37c and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x37c and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x37c and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x37c and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x37c and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x37c and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x37c and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x37c and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x37c and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x37c and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2a3 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2a3 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2a3 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2a3 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2a3 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2a3 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2a3 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2a3 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2a3 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2a3 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x0da and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x0da and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x0da and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x0da and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x0da and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x0da and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x0da and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x0da and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x0da and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x0da and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x30e and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x30e and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x30e and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x30e and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x30e and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x30e and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x30e and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x30e and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x30e and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x30e and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x00a and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x00a and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x00a and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x00a and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x00a and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x00a and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x00a and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x00a and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x00a and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x00a and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1a and fm1 == 0x06b and fs2 == 0 and fe2 == 0x1a
+               and fm2 == 0x06b and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1a and fm1 == 0x06b and fs2 == 0 and fe2 == 0x1a
+               and fm2 == 0x06b and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1a and fm1 == 0x06b and fs2 == 0 and fe2 == 0x1a
+               and fm2 == 0x06b and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1a and fm1 == 0x06b and fs2 == 0 and fe2 == 0x1a
+               and fm2 == 0x06b and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1a and fm1 == 0x06b and fs2 == 0 and fe2 == 0x1a
+               and fm2 == 0x06b and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x260 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x260 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x260 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x260 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x260 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x260 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x260 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x260 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x260 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x260 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x188 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x188 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x188 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x188 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x188 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x188 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x188 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x188 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1c and fm1 == 0x188 and fs2 == 0 and fe2 == 0x1c
+               and fm2 == 0x188 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x19f and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x19f and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x19f and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x19f and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x19f and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x19f and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x19f and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x19f and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x19f and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x19f and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x1fe and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x1fe and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x1fe and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x1fe and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x1fe and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x1fe and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x1fe and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x1fe and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x1fe and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x1fe and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x010 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x010 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x010 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x010 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x010 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x010 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x010 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x010 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x010 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x010 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x02a and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x02a and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x02a and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x02a and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x02a and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x02a and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x02a and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x02a and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x02a and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x02a and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x3d4 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x3d4 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x3d4 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x3d4 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x3d4 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x3d4 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x3d4 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x3d4 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x3d4 and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x3d4 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1a and fm1 == 0x190 and fs2 == 0 and fe2 == 0x1a
+               and fm2 == 0x190 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1a and fm1 == 0x190 and fs2 == 0 and fe2 == 0x1a
+               and fm2 == 0x190 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1a and fm1 == 0x190 and fs2 == 0 and fe2 == 0x1a
+               and fm2 == 0x190 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1a and fm1 == 0x190 and fs2 == 0 and fe2 == 0x1a
+               and fm2 == 0x190 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1a and fm1 == 0x190 and fs2 == 0 and fe2 == 0x1a
+               and fm2 == 0x190 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x3dc and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x3dc and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x3dc and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x3dc and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x3dc and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x3dc and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x3dc and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x3dc and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x3dc and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x3dc and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x24b and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x24b and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x24b and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x24b and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x24b and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x24b and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x24b and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x24b and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1d and fm1 == 0x24b and fs2 == 0 and fe2 == 0x1d
+               and fm2 == 0x24b and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x004 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x004 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x004 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x004 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x004 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x004 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x004 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x004 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x004 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x004 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x229 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x229 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x229 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x229 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x229 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x229 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x229 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x229 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x229 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x229 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2e1 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2e1 and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2e1 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2e1 and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2e1 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2e1 and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2e1 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2e1 and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x2e1 and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x2e1 and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x01b and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x01b and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x01b and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x01b and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x01b and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x01b and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x01b and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x01b and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x01b and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x01b and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x09e and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x09e and  fcsr == 0x0 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x09e and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x09e and  fcsr == 0x20 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x09e and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x09e and  fcsr == 0x40 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x09e and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x09e and  fcsr == 0x60 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          ? 'fs1 == 0 and fe1 == 0x1e and fm1 == 0x09e and fs2 == 0 and fe2 == 0x1e
+               and fm2 == 0x09e and  fcsr == 0x80 and rm_val == 7  and rs1_nan_prefix
+               == 0xffff and rs2_nan_prefix == 0xffff  #nosat'
+          : 1
+          coverage: 220/220
+     total_coverage: 322/322
