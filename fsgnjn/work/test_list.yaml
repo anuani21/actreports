@@ -1,0 +1,12 @@
+# testlist generated on 2023-02-28 07:13 GMT
+/home/anusha/new/RV32H/fsgnjn/test/fsgnjn_b1-01.S:
+  commit_id: '-'
+  work_dir: /home/anusha/new/RV32H/fsgnjn/work/fsgnjn_b1-01.S
+  macros:
+  - TEST_CASE_1=True
+  - XLEN=32
+  - FLEN=32
+  isa: RV32IF_Zicsr_Zfh
+  coverage_labels:
+  - fsgnjn_b1
+  test_path: /home/anusha/new/RV32H/fsgnjn/test/fsgnjn_b1-01.S
