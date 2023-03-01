@@ -1,0 +1,5 @@
+
+
+.PHONY : flh-align-01
+flh-align-01 :
+	@cd /home/anusha/new/RV32H/flh/work/flh-align-01.S;riscv64-unknown-elf-gcc -march=rv32if_zicsr_zfh          -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -T /home/anusha/new/riscof/sail_cSim/env/link.ld                -I /home/anusha/new/riscof/sail_cSim/env/                -I /home/anusha/new/RV32H/flh/test/env -mabi=ilp32  /home/anusha/new/RV32H/flh/test/flh-align-01.S -o ref.elf -DTEST_CASE_1=True -DXLEN=32 -DFLEN=32;riscv64-unknown-elf-objdump -D ref.elf > ref.disass;riscv_sim_RV32 --test-signature=Reference-sail_c_simulator.signature ref.elf > flh-align-01.log 2>&1;riscv_isac --verbose debug coverage -d                         -t flh-align-01.log --parser-name c_sail -o coverage.rpt                          --sig-label begin_signature  end_signature                         --test-label rvtest_code_begin rvtest_code_end                         -e ref.elf -c /home/anusha/new/riscv-ctg/sample_cgfs/dataset.cgf -c /home/anusha/new/riscv-ctg/sample_cgfs/sample_cgfs_fext/RV32H/rv32h_flh.cgf -x32 -f32 -ix False   -l flh-align ;

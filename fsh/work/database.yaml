@@ -1,0 +1,15 @@
+# database generated on 2023-02-28 07:21 GMT
+!!omap
+- /home/anusha/new/RV32H/fsh/test/fsh-align-01.S:
+    commit_id: '-'
+    isa:
+    - RV32IF_Zicsr_Zfh
+    - RV64IF_Zicsr_Zfh
+    parts: !!omap
+    - '0':
+        check:
+        - check ISA:=regex(.*I.*Zfh.*)
+        define:
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - fsh-align
